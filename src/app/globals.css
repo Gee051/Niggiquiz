@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+
+    .niggiNav{
+        width:100%
+    }
+
+    @media (min-width: 640px) {
+        .niggiNav {
+            max-width: 640px;
+        }
+        
+    }
+  
+    @media (min-width: 768px) {
+        .niggiNav {
+            max-width: 768px;
+        }
+        
+    }
+  
+    @media (min-width: 1024px) {
+        .niggiNav {
+            max-width: 1024px;
+        }
+        
+    }
+    @media (min-width: 1536px) {
+        .niggiNav {
+            max-width: 1536px;
+        }
+        
+    }
+  
+    
+  }
+  
