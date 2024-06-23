@@ -61,22 +61,7 @@ export default function Rules() {
         </motion.div>
       </div>
 
-      <div className="flex flex-col sm:flex-row  px-3 pb-2">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="sm:w-1/2 text-center sm:text-left "
-        >
-          <h1 className="text-white text-xl sm:text-3xl lg:text-4xl lg:leading-normal font-extrabold pt-28">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 ">
-              Select your preferred Level of Questions
-            </span>
-          </h1>
-          <p className="text-black text-lg sm:text-xl lg:text-2xl mt-4">
-            Then Click Start Quiz
-          </p>
-        </motion.div>
+      <div className="flex flex-col sm:flex-row  px-3">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -92,6 +77,21 @@ export default function Rules() {
               height={1300}
             />
           </div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="sm:w-1/2 text-center sm:text-left "
+        >
+          <h1 className="text-white text-xl sm:text-3xl lg:text-4xl lg:leading-normal font-extrabold pt-28">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 ">
+              Select your preferred Level of Questions
+            </span>
+          </h1>
+          <p className="text-black text-lg sm:text-xl lg:text-2xl mt-4">
+            Then Click Start Quiz
+          </p>
         </motion.div>
       </div>
 
@@ -135,22 +135,6 @@ export default function Rules() {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="sm:w-1/2 text-center sm:text-left "
-        >
-          <h1 className="text-white text-2xl  sm:text-4xl lg:text-5xl lg:leading-normal font-extrabold">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
-              You are given two hints
-            </span>
-          </h1>
-          <p className="text-black text-lg mt-2 sm:text-xl lg:text-2xl">
-            Hints help you by removing two of the wrong options and leaving you
-            with one right and one wrong option
-          </p>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
           className="sm:w-1/2 flex justify-center lg:mt-0 mt-5"
         >
           <div className="w-[450px] h-[350px] lg:w-[400px] lg:h-[300px] relative">
@@ -162,6 +146,22 @@ export default function Rules() {
               height={1000}
             />
           </div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="sm:w-1/2 text-center sm:text-left "
+        >
+          <h1 className="text-white text-2xl  sm:text-4xl lg:text-5xl lg:leading-normal font-extrabold">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
+              You are given two hints
+            </span>
+          </h1>
+          <p className="text-black text-lg mt-2 sm:text-xl lg:text-2xl">
+            Hints help you by removing two of the wrong options and leaving you
+            with one right and one wrong option
+          </p>
         </motion.div>
       </div>
 

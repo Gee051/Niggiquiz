@@ -146,16 +146,16 @@ const handleQuit = useCallback(() => {
   const formattedTime = `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
 
   return (
-    <main className="bg-gray-100">
-      <div className="flex flex-col items-center justify-center min-h-screen">
-        <div className="text-3xl font-extrabold flex flex-col uppercase pb-2">
+    <main className="bg-gray-100  ">
+      <div className="flex flex-col items-center justify-center min-h-screen p-2 m-2">
+        <div className="text-3xl font-extrabold  items-center text-center flex flex-col uppercase pb-2">
           <h1 className="text-black">SUBJECT: {currentQuestion.subject}</h1>
           <h3 className="flex items-center justify-center">
             LEVEL: {currentQuestion.level}
           </h3>
         </div>
-        <div className="w-full max-w-3xl p-5 bg-white shadow-md rounded-xl flex flex-col justify-center h-[400px] border-[2px] border-[#967ed8]">
-          <div className="flex p-2 m-2 justify-between">
+        <div className="w-full max-w-3xl p-5 bg-white shadow-md rounded-xl flex flex-col justify-center h-[600px] border-[2px] border-[#967ed8]">
+          <div className="flex p-2 m-2 justify-between pb-16">
             <div className="flex gap-2">
               <FaEye
                 className={`text-2xl font-bold ${
@@ -183,7 +183,7 @@ const handleQuit = useCallback(() => {
               You have 30 seconds left
             </div>
           )}
-          <h1 className="text-2xl font-bold mb-4 flex justify-center">
+          <h1 className="text-2xl font-bold mb-4 pb-8 flex justify-center">
             {currentQuestion.question}
           </h1>
           <div className="flex items-center justify-center">
@@ -191,7 +191,7 @@ const handleQuit = useCallback(() => {
               {visibleOptions.map((optionIndex) => (
                 <button
                   key={optionIndex}
-                  className={`w-full p-3 rounded-full border-[2px] text-black font-bold hover:bg-[#9f88dd] ${
+                  className={`w-full p-3 rounded-full border-[2px]  text-black font-medium ${
                     selectedAnswer === currentQuestion[`op${optionIndex + 1}`]
                       ? feedbackStatus === "correct"
                         ? "bg-green-500"

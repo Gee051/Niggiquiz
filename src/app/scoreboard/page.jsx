@@ -3,7 +3,7 @@ import ScoreboardContent from '../components/ScoreboardContent';
 
 export default function Scoreboard() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div className='p-3'>Loading...</div>}>
     <ScoreboardContent />
   </Suspense>
 );

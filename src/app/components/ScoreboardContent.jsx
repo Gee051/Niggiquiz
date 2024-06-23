@@ -46,11 +46,11 @@ export default function ScoreboardContent() {
 
   return (
     <main className="bg-gray-100">
-      <div className="flex flex-col items-center justify-center min-h-screen">
+      <div className="flex flex-col items-center justify-center min-h-screen m-2 p-2">
         <h1 className="text-black p-4 text-6xl font-extrabold">Hey {userName}</h1>
         <div className="w-full max-w-3xl p-5 bg-white shadow-md rounded-xl flex flex-col justify-center h-[300px] border-[2px] border-[#967ed8]">
           <h2 className="text-3xl font-bold flex items-center justify-center mb-3">
-            Your Results:
+            Your Results :
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
               {scorePercentage}%
             </span>

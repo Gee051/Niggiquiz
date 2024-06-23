@@ -3,7 +3,7 @@ import QuestionsContent from '../components/QuestionsContent';
 
 export default function Questions() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div className='p-3'>Loading...</div>}>
     <QuestionsContent/>
   </Suspense>
 );

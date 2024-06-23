@@ -53,7 +53,7 @@ const Banner = () => {
                 <Image
                   src="/assets/kids1.png"
                   alt="Nggquiz"
-                  className="absolute transform -translate-x-1/2 -translate-y-1/2  pb-3 top-1/2 left-1/2"
+                  className="absolute transform -translate-x-1/2 -translate-y-1/2  p-2 top-1/2 left-1/2"
                   width={300}
                   height={300}
                 />
@@ -69,52 +69,6 @@ const Banner = () => {
 export default Banner;
 
 {
-  /* <div className="grid grid-cols-1 sm:grid-cols-12">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
-        >
-          <h1 className="text-white mb-4 text-4xl mt-2 sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
-              NIGGI-QUIZ
-            </span>
-
-          </h1>
-          <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-          An engaging kids quiz app offering educational challenges across different subjects, designed to make learning fun and interactive through stimulating questions and a user-friendly interface.
-          </p>
-          <div>
-            <Link
-              href="/quiz"
-              className="px-6 inline-block py-3  hover:scale-105 hover:transition cursor-pointer sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 to-purple-500 hover:bg-slate-200 text-white"
-            >
-              Play Now
-            </Link>
         
-          </div>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="col-span-4 place-self-center mt-9 lg:mt-2"
-        >
-          <div className=" w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
-            <Image
-              src="/assets/kids1.png"
-              alt="Nggquiz"
-              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-              width={300}
-              height={300}
-            />
-          </div>
-        </motion.div>
-      </div> */
 }
-//     </section>
-//   );
-// };
 
-// export default Banner;

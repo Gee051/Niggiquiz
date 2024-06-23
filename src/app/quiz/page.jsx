@@ -79,7 +79,7 @@ export default function Quiz() {
       </div>
       
       <div>
-        <h1 className="text-black text-4xl font-extrabold p-3 px-4">Select Category</h1>
+        <h1 className="text-black text-4xl font-extrabold p-3 ">Select Category</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {subjects.map((subject, index) => (
             <div key={index} className="p-4">
@@ -100,7 +100,7 @@ export default function Quiz() {
       </div>
 
       <div className="pt-3">
-        <h1 className="text-black text-4xl font-extrabold p-3 px-4">Select Level</h1>
+        <h1 className="text-black text-4xl font-extrabold p-3">Select Level</h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
           {difficultyLevels.map((level, index) => (
             <div key={index} className="p-4">
