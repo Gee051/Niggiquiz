@@ -61,8 +61,8 @@
             "question": "What is 9 + 3 - 2?",
             "op1": "8",
             "op2": "9",
-            "op3": "10",
-            "op4": "11",
+            "op3": "11",
+            "op4": "10",
             "correct_answer": "10"
         },
         {
@@ -127,8 +127,8 @@
             "question": "What is 18 - 4?",
             "op1": "12",
             "op2": "13",
-            "op3": "14",
-            "op4": "15",
+            "op3": "15",
+            "op4": "14",
             "correct_answer": "14"
         },
         {
@@ -259,8 +259,8 @@
             "question": "Calculate the area of a rectangle with length 12 cm and width 8 cm.",
             "op1": "80",
             "op2": "88",
-            "op3": "96",
-            "op4": "104",
+            "op3": "104",
+            "op4": "96",
             "correct_answer": "96"
         },
         {
@@ -378,10 +378,10 @@
             "subject": "English",
             "level": "easy",
             "question": "What is the plural of 'book'?",
-            "op1": "Books",
+            "op1": "Book",
             "op2": "Bookies",
             "op3": "Bookses",
-            "op4": "Book",
+            "op4": "Books",
             "correct_answer": "Books"
         },
         {
@@ -457,8 +457,8 @@
             "question": "Which word is a synonym for 'confused'?",
             "op1": "Clear",
             "op2": "Clumsy",
-            "op3": "Chaotic",
-            "op4": "Clever",
+            "op3": "Clever",
+            "op4": "Chaotic",
             "correct_answer": "Chaotic"
         },
         {
@@ -565,10 +565,10 @@
             "subject": "English",
             "level": "hard",
             "question": "Identify the adjective in the sentence: 'The quick brown fox jumps over the lazy dog.'",
-            "op1": "quick",
+            "op1": "lazy",
             "op2": "brown",
             "op3": "jumps",
-            "op4": "lazy",
+            "op4": "quick",
             "correct_answer": "quick"
         },
         {
@@ -687,9 +687,9 @@
             "level": "easy",
             "question": "What is the color of bananas?",
             "op1": "Purple",
-            "op2": "Yellow",
+            "op2": "Green",
             "op3": "Orange",
-            "op4": "Green",
+            "op4": "Yellow",
             "correct_answer": "Yellow"
         },
         {
@@ -807,10 +807,10 @@
             "subject": "Sciences",
             "level": "medium",
             "question": "Which planet is known as the 'Red Planet'?",
-            "op1": "Mars",
+            "op1": "Jupiter",
             "op2": "Venus",
             "op3": "Mercury",
-            "op4": "Jupiter",
+            "op4": "Mars",
             "correct_answer": "Mars"
         },
         {
@@ -1028,9 +1028,9 @@
             "level": "easy",
             "question": "What do we use to drink water?",
             "op1": "Spoon",
-            "op2": "Cup",
+            "op2": "Fork",
             "op3": "Plate",
-            "op4": "Fork",
+            "op4": "Cup",
             "correct_answer": "Cup"
         },
         {
@@ -1160,9 +1160,9 @@
             "level": "medium",
             "question": "What do we call a group of fish?",
             "op1": "Flock",
-            "op2": "School",
+            "op2": "Herd",
             "op3": "Pack",
-            "op4": "Herd",
+            "op4": "School",
             "correct_answer": "School"
         },
         {
@@ -1292,9 +1292,9 @@
             "level": "hard",
             "question": "What is the main ingredient in traditional Japanese miso soup?",
             "op1": "Tofu",
-            "op2": "Miso paste",
+            "op2": "Seaweed",
             "op3": "Soy sauce",
-            "op4": "Seaweed",
+            "op4": "Miso paste",
             "correct_answer": "Miso paste"
         },
         {
@@ -1611,9 +1611,9 @@
             "level": "hard",
             "question": "Which of these exercises strengthens the core muscles?",
             "op1": "Squats",
-            "op2": "Plank",
+            "op2": "Jumping jacks",
             "op3": "Lunges",
-            "op4": "Jumping jacks",
+            "op4": "Plank",
             "correct_answer": "Plank"
         },
         {
@@ -1953,8 +1953,8 @@
             "question": "Which art movement aimed to express emotional experience rather than physical reality?",
             "op1": "Surrealism",
             "op2": "Impressionism",
-            "op3": "Expressionism",
-            "op4": "Realism",
+            "op3": "Realism",
+            "op4": "Expressionism",
             "correct_answer": "Expressionism"
         },
         {
@@ -1973,10 +1973,10 @@
             "subject": "Arts",
             "level": "hard",
             "question": "Who painted 'The Persistence of Memory'?",
-            "op1": "Salvador Dalí",
+            "op1": "Claude Monet",
             "op2": "Vincent van Gogh",
             "op3": "Pablo Picasso",
-            "op4": "Claude Monet",
+            "op4": "Salvador Dalí",
             "correct_answer": "Salvador Dalí"
         }
     ]
