@@ -44,14 +44,14 @@ export default function Rules() {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="sm:w-1/2 text-center sm:text-left px-3 "
+          className="sm:w-1/2 text-center   px-3 "
         >
-          <h1 className="text-white text-2xl sm:text-4xl lg:text-5xl lg:leading-normal font-extrabold">
+          <h1 className="text-white text-2xl sm:text-4xl lg:text-5xl lg:leading-normal font-extrabold flex items-center">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
               Input your name and Click Enter
             </span>
           </h1>
-          <p className="text-black text-lg sm:text-xl lg:text-2xl mt-2">
+          <p className="text-black text-lg sm:text-xl lg:text-2xl mt-2 flex items-center">
             Select your preferred Category of Questions
           </p>
 
@@ -82,10 +82,10 @@ export default function Rules() {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="sm:w-1/2 text-center sm:text-left "
+          className="sm:w-1/2 text-center"
         >
-          <h1 className="text-white text-xl sm:text-3xl lg:text-4xl lg:leading-normal font-extrabold pt-28">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 ">
+          <h1 className="text-white text-2xl sm:text-3xl lg:text-4xl lg:leading-normal font-extrabold pt-28 flex items-center">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 flex items-center ">
               Select your preferred Level of Questions
             </span>
           </h1>
@@ -116,10 +116,10 @@ export default function Rules() {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="sm:w-1/2 text-center sm:text-left "
+          className="sm:w-1/2 text-center"
         >
-          <h1 className="text-white text-2xl sm:text-4xl lg:text-5xl lg:leading-normal font-extrabold">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
+          <h1 className="text-white text-2xl sm:text-4xl lg:text-5xl lg:leading-normal pt-5 font-extrabold">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 ">
               Start Quiz
             </span>
           </h1>
@@ -151,14 +151,14 @@ export default function Rules() {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="sm:w-1/2 text-center sm:text-left "
+          className="sm:w-1/2 text-center "
         >
           <h1 className="text-white text-2xl  sm:text-4xl lg:text-5xl lg:leading-normal font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
               You are given two hints
             </span>
           </h1>
-          <p className="text-black text-lg mt-2 sm:text-xl lg:text-2xl">
+          <p className="text-black text-lg mt-2 sm:text-xl lg:text-2xl flex items-center">
             Hints help you by removing two of the wrong options and leaving you
             with one right and one wrong option
           </p>
