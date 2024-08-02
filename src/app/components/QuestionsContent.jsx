@@ -154,7 +154,7 @@ const handleQuit = useCallback(() => {
             LEVEL: {currentQuestion.level}
           </h3>
         </div>
-        <div className="w-full max-w-3xl p-5 bg-white shadow-md rounded-xl flex flex-col justify-center h-[600px] border-[2px] border-[#967ed8]">
+        <div className="w-full max-w-3xl p-5 bg-white shadow-md rounded-xl flex flex-col justify-center h-[800px] border-[2px] border-[#967ed8]">
           <div className="flex p-2 m-2 justify-between pb-16">
             <div className="flex gap-2">
               <FaEye
