@@ -1,11 +1,10 @@
-"use client";
 import React, { useState, useEffect, useCallback, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import questionList from "../components/NiggiLinks/questionList";
 import { FaEye } from "react-icons/fa";
 import { FaRegClock } from "react-icons/fa6";
 
-export default function QuestionsContent() {
+export default function QuestionsContent({ onRestart }) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [subject, setSubject] = useState('');
@@ -30,8 +29,6 @@ export default function QuestionsContent() {
   const [timeLeft, setTimeLeft] = useState(1 * 60 + 20); 
   const [showWarning, setShowWarning] = useState(false);
 
-
-
   useEffect(() => {
     const savedAnswers = localStorage.getItem("selectedAnswers");
     if (savedAnswers) {
@@ -39,22 +36,16 @@ export default function QuestionsContent() {
     }
   }, []);
 
-
   useEffect(() => {
     localStorage.setItem("selectedAnswers", JSON.stringify(selectedAnswers));
   }, [selectedAnswers]);
 
-
-
-const handleQuit = useCallback(() => {
-  router.push(
-    `/scoreboard?totalQuestions=${filteredQuestions.length}&correctAnswers=${score.correct}&wrongAnswers=${score.incorrect}&hintsUsed=${2 - hintsRemaining}&category=${subject}&level=${level}`
-  );
-}, [router, score.correct, score.incorrect, filteredQuestions.length, hintsRemaining, subject, level]);
-
-
-
-
+  const handleQuit = useCallback(() => {
+    router.push(
+      `/scoreboard?totalQuestions=${filteredQuestions.length}&correctAnswers=${score.correct}&wrongAnswers=${score.incorrect}&hintsUsed=${2 - hintsRemaining}&category=${subject}&level=${level}`
+    );
+    onRestart(); // Call onRestart to reset the quiz state
+  }, [router, score.correct, score.incorrect, filteredQuestions.length, hintsRemaining, subject, level, onRestart]);
 
   useEffect(() => {
     if (timeLeft === 0) {
@@ -93,7 +84,6 @@ const handleQuit = useCallback(() => {
     }
   };
 
-
   const handleNext = () => {
     if (currentQuestionIndex < filteredQuestions.length - 1) {
       setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
@@ -101,12 +91,10 @@ const handleQuit = useCallback(() => {
     }
   };
 
-
   const handlePrevious = () => {
     setCurrentQuestionIndex((prevIndex) => Math.max(prevIndex - 1, 0));
     setVisibleOptions([0, 1, 2, 3]); 
   };
-
 
   const handleHintClick = () => {
     if (
@@ -134,7 +122,6 @@ const handleQuit = useCallback(() => {
     handleQuit(); 
   };
 
-
   if (filteredQuestions.length === 0) return <div>Loading...</div>;
 
   const currentQuestion = filteredQuestions[currentQuestionIndex];
@@ -146,9 +133,9 @@ const handleQuit = useCallback(() => {
   const formattedTime = `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
 
   return (
-    <main className="bg-gray-100  ">
+    <main className="bg-gray-100">
       <div className="flex flex-col items-center justify-center min-h-screen p-2 m-2">
-        <div className="text-3xl font-extrabold  items-center text-center flex flex-col uppercase pb-2">
+        <div className="text-3xl font-extrabold items-center text-center flex flex-col uppercase pb-2">
           <h1 className="text-black">SUBJECT: {currentQuestion.subject}</h1>
           <h3 className="flex items-center justify-center">
             LEVEL: {currentQuestion.level}
@@ -179,7 +166,7 @@ const handleQuit = useCallback(() => {
             </div>
           </div>
           {showWarning && (
-            <div className="text-red-500  font-semibold text-center mb-2">
+            <div className="text-red-500 font-semibold text-center mb-2">
               You have 30 seconds left
             </div>
           )}
@@ -191,7 +178,7 @@ const handleQuit = useCallback(() => {
               {visibleOptions.map((optionIndex) => (
                 <button
                   key={optionIndex}
-                  className={`w-full p-3 rounded-full border-[2px]  text-black font-medium ${
+                  className={`w-full p-3 rounded-full border-[#967ed8] border-[2px]  text-black font-medium ${
                     selectedAnswer === currentQuestion[`op${optionIndex + 1}`]
                       ? feedbackStatus === "correct"
                         ? "bg-green-500"
@@ -208,42 +195,38 @@ const handleQuit = useCallback(() => {
               ))}
             </div>
           </div>
-          <div className="flex justify-between items-center mt-5">
+          <div className="flex justify-between mt-4">
             <button
               onClick={handlePrevious}
-              className={`px-4 py-2 rounded-md ${
-                currentQuestionIndex === 0
-                  ? "bg-gray-500 cursor-not-allowed"
-                  : "bg-purple-500 text-white"
-              }`}
+              className="p-2 rounded-full border-[#967ed8] border-[2px] w-[150px] text-black hover:bg-[#967ed8] text-md"
               disabled={currentQuestionIndex === 0}
             >
               Previous
             </button>
             <button
-              onClick={handleQuit}
-              className="bg-red-500 text-white px-4 py-2 rounded-md"
-            >
-              Quit
-            </button>
+            onClick={handleQuit}
+            className="mt-4 p-2 rounded-full border-red-600 border-[2px] w-[150px] text-black hover:bg-red-600 text-md"
+          >
+            Quit
+          </button>
             {currentQuestionIndex === filteredQuestions.length - 1 ? (
               <button
                 onClick={handleSubmit}
-                className="px-4 py-2 rounded-md bg-green-500"
-                disabled={!selectedAnswer}
+                className="p-2 rounded-full border-green-500 border-[2px] w-[150px] text-black hover:bg-green-500 text-md"
               >
                 Submit
               </button>
             ) : (
               <button
                 onClick={handleNext}
-                className="px-4 py-2 rounded-md bg-green-500"
-                disabled={!selectedAnswer}
+                className="p-2 rounded-full border-green-500 border-[2px] w-[150px] text-black  hover:bg-green-500 text-md"
+                disabled={currentQuestionIndex === filteredQuestions.length - 1}
               >
                 Next
               </button>
             )}
           </div>
+        
         </div>
       </div>
     </main>
